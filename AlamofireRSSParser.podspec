@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = "AlamofireRSSParser"
-  s.version          = "2.3.0"
+  s.version          = "2.4.0"
   s.summary          = "An RSS parser response handler for Alamofire"
   s.description      = "An RSS parser plugin for Alamofire.  Adds a \"responseRSS()\" responseHandler to Alamofire."
   
@@ -21,7 +21,7 @@ Pod::Spec.new do |s|
   s.ios.deployment_target = '10.0'
   s.requires_arc = true
 
-  s.swift_version = '5.1'
+  s.swift_version = '5.2'
   s.source_files = 'Pod/Classes/**/*'
   s.dependency 'Alamofire', '~> 5.0'
 end

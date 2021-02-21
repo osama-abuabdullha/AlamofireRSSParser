@@ -200,8 +200,8 @@ open class AlamofireRSSParser: NSObject, XMLParserDelegate {
             }
             
             if (elementName == "category") {
-                if let attributes = self.currentAttributes {
-                    currentItem.categories = (currentItem.categories ?? []) + [attributes]
+                if ((self.currentString != nil) && (!self.currentString.isEmpty)) {
+                    self.currentItem?.categories.append(self.currentString)
                 }
             }
             
