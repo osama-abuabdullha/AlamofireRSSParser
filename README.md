@@ -41,7 +41,7 @@ import AlamofireRSSParser
 ```
  wherever you're using it.
 
-**Note:  Since Alamofire is a dependency for AlamofireRSSParser, make sure you don't also include Alamofire in your Podile.**
+**Note:  Since Alamofire is a dependency for AlamofireRSSParser, make sure you don't also include Alamofire in your Podfile.**
 
 
 ### Manually
