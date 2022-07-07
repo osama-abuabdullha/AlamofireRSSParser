@@ -295,14 +295,14 @@ struct RSSDateFormatter {
     static func rfc822DateFormatter() -> DateFormatter {
         let dateFormatter: DateFormatter = DateFormatter()
         dateFormatter.locale = Locale(identifier: "en_US")
-        dateFormatter.dateFormat = "EEE, dd MMM yyyy HH:mm:ss Z"
+        dateFormatter.dateFormat = "MMM d, yyyy"
         return dateFormatter
     }
     
     static func rfc822DateFormatter2() -> DateFormatter {
         let dateFormatter: DateFormatter = DateFormatter()
         dateFormatter.locale = Locale(identifier: "en_US")
-        dateFormatter.dateFormat = "EEE, dd MMM yyyy HH:mm:ss z"
+        dateFormatter.dateFormat = "MMM d, yyyy"
         return dateFormatter
     }
     
