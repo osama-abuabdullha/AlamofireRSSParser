@@ -168,7 +168,7 @@ open class AlamofireRSSParser: NSObject, XMLParserDelegate {
             }
             
             if (elementName == "pubDate") {
-             currentItem.pubDate = self.currentStrin
+             currentItem.pubDate = self.currentString
             }
             
             if (elementName == "published") {
@@ -257,7 +257,7 @@ open class AlamofireRSSParser: NSObject, XMLParserDelegate {
             }
             
             if (elementName == "pubDate") {
-             self.feed?.pubDate = self.currentStrin
+             self.feed?.pubDate = self.currentString
             }
             if (elementName == "published") {
                 if let date = RSSDateFormatter.publishedDateFormatter().date(from: self.currentString) {
