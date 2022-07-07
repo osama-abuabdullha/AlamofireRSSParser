@@ -219,7 +219,9 @@ open class AlamofireRSSParser: NSObject, XMLParserDelegate {
             if (elementName == "link") {
                 self.feed?.link = self.currentString
             }
-            
+            if (elementName == "post-image") {
+                self.feed?.image = self.currentString
+            }
             if (elementName == "language") {
                 self.feed?.language = self.currentString
             }
