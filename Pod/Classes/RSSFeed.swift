@@ -20,6 +20,7 @@ open class RSSFeed: CustomStringConvertible {
     open var title: String? = nil
     open var link: String? = nil
     open var image: String? = nil
+    open var body: String? = nil
     open var feedDescription: String? = nil
     open var pubDate: Date? = nil
     open var lastBuildDate: Date? = nil
