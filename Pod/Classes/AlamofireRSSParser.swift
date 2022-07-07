@@ -151,6 +151,9 @@ open class AlamofireRSSParser: NSObject, XMLParserDelegate {
             if (elementName == "post-image") {
                  currentItem.image = self.currentString
             }
+            if (elementName == "description") {
+                 currentItem.body = self.currentString
+            }
             
             if (elementName == "author") {
                 currentItem.author = self.currentString
@@ -228,7 +231,9 @@ open class AlamofireRSSParser: NSObject, XMLParserDelegate {
             if (elementName == "language") {
                 self.feed?.language = self.currentString
             }
-            
+            if (elementName == "description") {
+                 self.feed?.body = self.currentString
+            }
             if (elementName == "copyright") {
                 self.feed?.copyright = self.currentString
             }
@@ -312,14 +317,14 @@ struct RSSDateFormatter {
     static func publishedDateFormatter() -> DateFormatter {
         let dateFormatter: DateFormatter = DateFormatter()
         dateFormatter.locale = Locale(identifier: "en_US")
-        dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ssZ"
+        dateFormatter.dateFormat = "MMM d, yyyy"
         return dateFormatter
     }
     
     static func publishedDateFormatter2() -> DateFormatter {
         let dateFormatter: DateFormatter = DateFormatter()
         dateFormatter.locale = Locale(identifier: "en_US")
-        dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ssz"
+        dateFormatter.dateFormat = "MMM d, yyyy"
         return dateFormatter
     }
 }
