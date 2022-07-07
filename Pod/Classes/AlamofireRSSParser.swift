@@ -168,11 +168,7 @@ open class AlamofireRSSParser: NSObject, XMLParserDelegate {
             }
             
             if (elementName == "pubDate") {
-                if let date = RSSDateFormatter.rfc822DateFormatter().date(from: self.currentString) {
-                    currentItem.pubDate = date
-                } else if let date = RSSDateFormatter.rfc822DateFormatter2().date(from: self.currentString) {
-                    currentItem.pubDate = date
-                }
+             currentItem.pubDate = self.currentStrin
             }
             
             if (elementName == "published") {
@@ -261,13 +257,8 @@ open class AlamofireRSSParser: NSObject, XMLParserDelegate {
             }
             
             if (elementName == "pubDate") {
-                if let date = RSSDateFormatter.rfc822DateFormatter().date(from: self.currentString) {
-                    self.feed?.pubDate = date
-                } else if let date = RSSDateFormatter.rfc822DateFormatter2().date(from: self.currentString) {
-                    self.feed?.pubDate = date
-                }
+             self.feed?.pubDate = self.currentStrin
             }
-            
             if (elementName == "published") {
                 if let date = RSSDateFormatter.publishedDateFormatter().date(from: self.currentString) {
                     self.feed?.pubDate = date
