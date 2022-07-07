@@ -172,11 +172,7 @@ open class AlamofireRSSParser: NSObject, XMLParserDelegate {
             }
             
             if (elementName == "published") {
-                if let date = RSSDateFormatter.publishedDateFormatter().date(from: self.currentString) {
-                    currentItem.pubDate = date
-                } else if let date = RSSDateFormatter.publishedDateFormatter2().date(from: self.currentString) {
-                    currentItem.pubDate = date
-                }
+               currentItem.pubDate = self.currentString
             }
             
             if (elementName == "media:thumbnail") {
@@ -260,11 +256,8 @@ open class AlamofireRSSParser: NSObject, XMLParserDelegate {
              self.feed?.pubDate = self.currentString
             }
             if (elementName == "published") {
-                if let date = RSSDateFormatter.publishedDateFormatter().date(from: self.currentString) {
-                    self.feed?.pubDate = date
-                } else if let date = RSSDateFormatter.publishedDateFormatter2().date(from: self.currentString) {
-                    self.feed?.pubDate = date
-                }
+               self.feed?.pubDate = self.currentString
+
             }
             
             if (elementName == "lastBuildDate") {
