@@ -34,7 +34,7 @@ open class RSSFeed: CustomStringConvertible {
     open var items: [RSSItem] = Array()
     
     open var description: String {
-        return "title: \(String(describing: self.title))\nimage: \(String(describing: self.image))\nfeedDescription: \(String(describing: self.feedDescription))\nlink: \(String(describing: self.link))\npubDate: \(String(describing: self.pubDate))\nlastBuildDate: \(String(describing: self.lastBuildDate))\nlanguage: \(String(describing: self.language))\ncopyright: \(String(describing: self.copyright))\nmanagingEditor: \(String(describing: self.managingEditor))\nwebMaster: \(String(describing: self.webMaster))\ngenerator: \(String(describing: self.generator))\ndocs: \(String(describing: self.docs))\nttl: \(String(describing: self.ttl))\nitems: \n\(self.items)"
+        return "title: \(String(describing: self.title))\nfeedDescription: \(String(describing: self.feedDescription))\nlink: \(String(describing: self.link))\npubDate: \(String(describing: self.pubDate))\nlastBuildDate: \(String(describing: self.lastBuildDate))\nlanguage: \(String(describing: self.language))\ncopyright: \(String(describing: self.copyright))\nmanagingEditor: \(String(describing: self.managingEditor))\nwebMaster: \(String(describing: self.webMaster))\ngenerator: \(String(describing: self.generator))\ndocs: \(String(describing: self.docs))\nttl: \(String(describing: self.ttl))\nitems: \n\(self.items)"
     }
     
 }
