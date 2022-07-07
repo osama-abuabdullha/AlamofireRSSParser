@@ -44,7 +44,7 @@ open class RSSItem: CustomStringConvertible {
     open var source: String? = nil
     open var image: String? = nil
     open var body: String? = nil
-    open var pubDate: Date? = nil
+    open var pubDate: String? = nil
     open var mediaThumbnail: String? = nil
     open var mediaContent: String? = nil
     open var imagesFromDescription: [String]? = nil
