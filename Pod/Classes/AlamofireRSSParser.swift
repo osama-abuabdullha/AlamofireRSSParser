@@ -148,6 +148,9 @@ open class AlamofireRSSParser: NSObject, XMLParserDelegate {
             if (elementName == "guid") {
                 currentItem.guid = self.currentString
             }
+            if (elementName == "post-image") {
+                 currentItem.image = self.currentString
+            }
             
             if (elementName == "author") {
                 currentItem.author = self.currentString
